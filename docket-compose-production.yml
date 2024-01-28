@@ -21,7 +21,7 @@ services:
       - "3000:3000"
       - "3001:3001"
       - "80:3002"
-    link:
+    links:
       - emqx
       - mongo 
     comand: sh - "node index.js"
@@ -55,7 +55,6 @@ services:
 
     volumes:
       - vol-emqx-data:/opt/emqx/data
-    #  - vol-emqx-etc:/opt/emqx/etc
       - vol-emqx-log:/opt/emqx/log
     
     links:
