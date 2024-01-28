@@ -16,11 +16,11 @@ services:
     restart: always
     working_dir: /home/node/app
     volumes:
-      -./mycode/index.js:/home/node/app/index.js
+      - ./mycode/index.js:/home/node/app/index.js
     port: 
-      - "3000:3000"
-      - "3001:3001"
-      - "80:3002"
+      - 3000:3000
+      - 3001:3001
+      - 80:3002
     links:
       - emqx
       - mongo 
