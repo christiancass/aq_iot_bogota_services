@@ -17,14 +17,15 @@ services:
     working_dir: /home/node/app
     volumes:
       - ./mycode/index.js:/home/node/app/index.js
-    port: 
+    ports:
       - 3000:3000
       - 3001:3001
       - 80:3002
     links:
       - emqx
       - mongo 
-    comand: sh - "node index.js"
+    command: sh -c "node index.js" 
+
 
 
   mongo:
